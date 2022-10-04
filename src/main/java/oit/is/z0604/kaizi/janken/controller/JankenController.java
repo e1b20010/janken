@@ -27,4 +27,31 @@ public class JankenController {
     return "janken.html";
   }
 
+  @GetMapping("/rock")
+  public String rock(ModelMap model) {
+    String hand = "Gu";
+    String result = "Draw!";
+    model.addAttribute("hand", hand);
+    model.addAttribute("result", result);
+    return "janken.html";
+  }
+
+  @GetMapping("/scissors")
+  public String scissors(ModelMap model) {
+    String hand = "Choki";
+    String result = "You Lose!";
+    model.addAttribute("hand", hand);
+    model.addAttribute("result", result);
+    return "janken.html";
+  }
+
+  @GetMapping("/paper")
+  public String paper(ModelMap model) {
+    String hand = "Pa";
+    String result = "You Win!";
+    model.addAttribute("hand", hand);
+    model.addAttribute("result", result);
+    return "janken.html";
+  }
+  
 }

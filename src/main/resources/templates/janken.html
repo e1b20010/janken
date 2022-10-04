@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <title>JanKen GAME!</title>
   <title>SpringBoot Sample2-4</title>
 </head>
 
@@ -10,18 +11,28 @@
   <h1>JanKen GAME!</h1>
 
   <p>
-    <!--form actionが処理を渡す先を示す
-      input nameがパラメータ名を表している
-    この場合，kakeru1,kakeru2の2つの変数が/sample25にpost メソッドで渡される-->
   <form action="/index" method="get">
     <div th:if="${nameResult}">
       Hi [[${nameResult}]]
     </div>
   </form>
   </p>
+  <a href="/rock">ぐー</a>
+  <a href="/scissors">ちょき</a>
+  <a href="/paper">ぱー</a>
+
+  <p>
+  <div th:if="${hand}">
+    あなたの手 [[${hand}]]<br>
+    相手の手 Gu<br>
+    結果[[${result}]]<br>
+  </div>
+  </p>
+  
   <a href="/sample26">ぐー</a>
   <a href="/sample26">ちょき</a>
   <a href="/sample26">ぱー</a>
+
 </body>
 
 </html>
