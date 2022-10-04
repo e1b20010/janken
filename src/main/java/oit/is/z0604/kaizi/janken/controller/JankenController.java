@@ -53,5 +53,5 @@ public class JankenController {
     model.addAttribute("result", result);
     return "janken.html";
   }
-
+  
 }
